@@ -5,6 +5,8 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/2.4/manual/en/scripting/life-cycle-callbacks.html
 
+import ConfigTiemKich from "./ConfigTiemKich";
+
 const {ccclass, property} = cc._decorator;
 
 @ccclass
@@ -12,10 +14,12 @@ export default class ViewItemBetting extends cc.Component {
 
     @property(cc.Sprite)
     bg:cc.Sprite = null;
-    @property(cc.Color)
-    colorBgLose : cc.Color = null;
-    @property(cc.Color)
-    colorBgWin:cc.Color = null;
+    @property(cc.SpriteFrame)
+    sfBgLose : cc.SpriteFrame = null;
+    @property(cc.SpriteFrame)
+    sfBgWin:cc.SpriteFrame = null;
+    @property(cc.SpriteFrame)
+    sfBgSpecial:cc.SpriteFrame = null;
 
     @property(cc.Label)
     txtUsername:cc.Label = null;
@@ -27,6 +31,8 @@ export default class ViewItemBetting extends cc.Component {
 
     @property(cc.Sprite)
     bgRate:cc.Sprite = null;
+    @property([cc.SpriteFrame])
+    bgRateList:cc.SpriteFrame[] = [];
     @property(cc.Label)
     txtRate:cc.Label = null;
 
@@ -39,7 +45,12 @@ export default class ViewItemBetting extends cc.Component {
         this.txtBet.string = data.bet;
 
         if(data.rate == null){
-            
+            for(var i=0;i<ConfigTiemKich.NumbetRateList.length;i++){
+                if(data.rate <= ConfigTiemKich.NumbetRateList[i]){
+                    this.bgRate.spriteFrame = this.bgRateList[i];
+                    return;
+                }
+            }
         }
     }
 
