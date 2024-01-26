@@ -1,0 +1,78 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "ViewGameRunningLoop",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 4.016666666666667,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "paths": {
+      "Path": {
+        "props": {
+          "scale": [
+            {
+              "frame": 0,
+              "value": {
+                "__type__": "cc.Vec3",
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            },
+            {
+              "frame": 2,
+              "value": {
+                "__type__": "cc.Vec3",
+                "x": 0.8,
+                "y": 1.2,
+                "z": 1
+              }
+            },
+            {
+              "frame": 4.016666666666667,
+              "value": {
+                "__type__": "cc.Vec3",
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            }
+          ]
+        }
+      },
+      "MayBay": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                601,
+                248,
+                0
+              ]
+            },
+            {
+              "frame": 2,
+              "value": [
+                487.5,
+                293.4
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 4.016666666666667,
+              "value": [
+                601,
+                248,
+                0
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "events": []
+}

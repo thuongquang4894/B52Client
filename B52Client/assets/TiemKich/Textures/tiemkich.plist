@@ -46,15 +46,15 @@
       <key>tiem_kich_19.png</key>
       <dict>
         <key>frame</key>
-        <string>{{1680,2},{324,55}}</string>
+        <string>{{1680,2},{55,324}}</string>
         <key>offset</key>
         <string>{0,0}</string>
         <key>rotated</key>
-        <false/>
+        <true/>
         <key>sourceColorRect</key>
-        <string>{{0,0},{324,55}}</string>
+        <string>{{0,0},{55,324}}</string>
         <key>sourceSize</key>
-        <string>{324,55}</string>
+        <string>{55,324}</string>
       </dict>
       <key>tiem_kich_50.png</key>
       <dict>
@@ -111,15 +111,15 @@
       <key>tiem_kich_23.png</key>
       <dict>
         <key>frame</key>
-        <string>{{1997,116},{303,48}}</string>
+        <string>{{1997,116},{48,303}}</string>
         <key>offset</key>
         <string>{0,0}</string>
         <key>rotated</key>
-        <true/>
+        <false/>
         <key>sourceColorRect</key>
-        <string>{{0,0},{303,48}}</string>
+        <string>{{0,0},{48,303}}</string>
         <key>sourceSize</key>
-        <string>{303,48}</string>
+        <string>{48,303}</string>
       </dict>
       <key>tiem_kich_18.png</key>
       <dict>
@@ -991,7 +991,7 @@
       <key>realTextureFileName</key>
       <string>tiemkich.png</string>
       <key>size</key>
-      <string>{2048,1024}</string>
+      <string>{2048,707}</string>
       <key>textureFileName</key>
       <string>tiemkich</string>
     </dict>

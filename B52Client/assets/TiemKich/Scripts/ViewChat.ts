@@ -10,18 +10,40 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class ViewChat extends cc.Component {
 
-    @property(cc.Widget)
-    boxNode:cc.Widget = null;
+    @property(cc.Node)
+    arrow:cc.Node = null;
+    
+    @property(cc.Node)
+    boxNode:cc.Node = null;
+
+    public resetView(){
+
+    }
 
     private isToggle : boolean = false;
     public OnBtnToggle(){
-        if(this.isToggle == false){
-            this.boxNode.top = 20;
+        cc.Tween.stopAllByTarget(this.arrow);
+        cc.Tween.stopAllByTarget(this.boxNode);
+        if(this.isToggle == true){
+            cc.tween(this.boxNode)
+            .to(0.3,{height:210})
+            .start();
+
+            cc.tween(this.arrow)
+            .delay(0.2)
+            .to(0.3,{angle:90})
+            .start();
         }
         else{
-            this.boxNode.top = 550;
+            cc.tween(this.boxNode)
+            .to(0.3,{height:560})
+            .start();
+
+            cc.tween(this.arrow)
+            .delay(0.2)
+            .to(0.3,{angle:-90})
+            .start();
         }
-        this.boxNode.updateAlignment();
         this.isToggle = !this.isToggle;
     }
     

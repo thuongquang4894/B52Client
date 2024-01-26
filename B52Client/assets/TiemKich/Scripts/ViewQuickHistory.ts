@@ -17,6 +17,12 @@ export default class ViewQuickHistory extends cc.Component {
 
     private historyList:number[] = [];
 
+    public resetView(){
+        for(var i=0;i<this.items.length;i++){
+            this.items[i].resetView();
+        }
+    }
+
     public init(historyList:number[]){
         this.historyList = historyList;
         for(var i=0;i<this.items.length;i++){
@@ -26,11 +32,19 @@ export default class ViewQuickHistory extends cc.Component {
         }
     }
 
+    public updateGame(data){
+        
+    }
+
     public add(amount){
         if(this.historyList.length == this.items.length){
             this.historyList = this.historyList.splice(0,1);
         }
         this.historyList.push(amount);
         this.init(this.historyList);
+    }
+
+    public onBtnShow(){
+        cc.systemEvent.emit("button_show_full_history",this.historyList);
     }
 }
